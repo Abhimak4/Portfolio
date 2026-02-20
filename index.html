@@ -20,15 +20,15 @@
 <nav>
     <div class="logo">
         <span class="main-logo">Abhishek</span>
-        <span class="sub-logo">M.Sc. CA & IT | Cloud Data Management</span>
+        <span class="sub-logo">M.Sc. CA & IT | Cloud Data Management</span> 
     </div>
     <ul class="nav-links">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-		<li><a href="#skills">Skills</a></li>
+        <li><a href="#hero">Home</a></li> 
+        <li><a href="#hero">About</a></li>
+        <li><a href="#education">Education</a></li> 
+        <li><a href="#experience">Experience</a></li> 
+        <li><a href="#projects">Projects</a></li> 
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
@@ -200,4 +200,15 @@
     window.addEventListener('scroll', updateCar);
     window.addEventListener('resize', updateCar);
     window.addEventListener('load', updateCar);
+	
+	
+document.querySelectorAll('a[href="#hero"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});	
 </script>
