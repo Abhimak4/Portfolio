@@ -232,7 +232,7 @@ ul { padding-left: 20px; color: #94a3b8; }
 /* ============================================================
    7. TECHNICAL ARSENAL (3+1 CENTERED LAYOUT)
    ============================================================ */
-#skills { text-align: LEFT; }
+#skills { text-align: left; }
 
 .skills-container {
     display: flex;
@@ -343,5 +343,6 @@ footer {
     display: block;      /* Ensures they stack vertically */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Adds depth to individual cards */
 }
+
 
 
