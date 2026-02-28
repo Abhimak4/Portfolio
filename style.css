@@ -94,6 +94,8 @@ nav {
     letter-spacing: 0.5px;
 }
 
+.nav-logo-img { height: 45px; width: auto; }
+
 
 
 .nav-links { list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; }
@@ -190,4 +192,5 @@ footer { text-align: center; padding: 60px 20px; color: #64748b; font-size: 0.9r
     .toggle .line:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
     h1 { font-size: 2.5rem; }
 }
+
 
