@@ -268,6 +268,7 @@ footer { text-align: center; padding: 60px 20px; color: #64748b; font-size: 0.9r
 /* Social Footer */
 .social-footer {
     margin-top: 50px;
+   align-items: center;
     color: #64748b;
     font-size: 0.8rem;
     letter-spacing: 2px;
@@ -311,6 +312,7 @@ footer { text-align: center; padding: 60px 20px; color: #64748b; font-size: 0.9r
     .toggle .line:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
     h1 { font-size: 2.5rem; }
 }
+
 
 
 
