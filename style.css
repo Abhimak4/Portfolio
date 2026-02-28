@@ -140,8 +140,18 @@ section { padding: 40px 8%; max-width: 1100px; margin: 40px auto; background: va
 h2 { color: var(--brand-blue); font-size: 2.2rem; border-left: 5px solid var(--brand-purple); padding-left: 20px; margin-bottom: 40px; }
 
 .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
-.project-card { background: #1e293b; padding: 50px; border-radius: 20px; transition: 0.3s; }
+.project-card { background: #1e293b; padding: 30px; border-radius: 20px; transition: 0.3s; }
 .project-card:hover { transform: translateY(-8px); border-color: rgba(56, 189, 248, 0.3); }
+
+/* Space between experience cards */
+#experience .project-card {
+    margin-bottom: 30px; 
+}
+
+/* Remove margin from the very last card so it doesn't add extra space at the bottom of the section */
+#experience .project-card:last-child {
+    margin-bottom: 0;
+}
 
 .skills-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
 .skill-item {
@@ -192,6 +202,7 @@ footer { text-align: center; padding: 60px 20px; color: #64748b; font-size: 0.9r
     .toggle .line:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
     h1 { font-size: 2.5rem; }
 }
+
 
 
 
