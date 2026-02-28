@@ -148,34 +148,12 @@
     </section>
 </main>
 
-<div class="scroll-track">
-    <div class="car-container">
-        <img src="car1.png" alt="Mercedes AMG GT" class="car-image">
-    </div>
-</div>
-
 <footer>
     <p>© 2026 Abhi Makwana | M.Sc. CS & IT</p>
 </footer>
 
 <script>
-    if (history.scrollRestoration) { history.scrollRestoration = 'manual'; }
-    window.scrollTo(0, 0);
-
-    const carContainer = document.querySelector('.car-container');
-    function updateCar() {
-        const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-        if (totalHeight <= 0) return;
-        const scrollProgress = window.scrollY / totalHeight;
-        const startX = -300; 
-        const endX = window.innerWidth + 100; 
-        const currentX = startX + (scrollProgress * (endX - startX));
-        if (carContainer) { carContainer.style.transform = `translateX(${currentX}px)`; }
-    }
-    window.addEventListener('scroll', updateCar);
-    window.addEventListener('load', updateCar);
-    window.addEventListener('resize', updateCar);
-
+    // Smooth scroll for anchor links
     document.querySelectorAll('a[href="#hero"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
