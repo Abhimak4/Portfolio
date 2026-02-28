@@ -47,8 +47,8 @@
         <h1>Abhishek Makwana</h1> 
         <h3 class="hero-tagline">Full Stack Developer & Data Engineer</h3> 
         <p class="hero-description">
-            I am a dedicated <strong>Full Stack Developer</strong> and <strong>Data Engineer</strong> with a <strong>Master of Science in Computer Science & Information Technology</strong> and a Post Graduate Diploma in <strong>Cloud Data Management</strong>. 
-            My professional identity is defined by a unique intersection of high-performance application development and data-driven infrastructure. 
+            I am a dedicated <strong>Full Stack Developer</strong> and <strong>Data Engineer</strong> with a <strong>Master of Science in Computer Science & Information Technology</strong> and a Post Graduate Diploma in <strong>Cloud Data Management</strong>.
+            My professional identity is defined by a unique intersection of high-performance application development and data-driven infrastructure.
             I specialize in the <strong>"Security-by-Design"</strong> philosophy, ensuring that scalability and cybersecurity are engineered into the foundation of every system I build.
         </p>
 
@@ -159,37 +159,6 @@
     <p>© 2026 Abhi Makwana | M.Sc. CS & IT</p>
 </footer>
 
-<script>
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetId === '#hero' ? 0 : targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-            }
-
-            // Close mobile menu on link click
-            const navLinks = document.getElementById('nav-links');
-            const hamburger = document.getElementById('hamburger');
-            navLinks.classList.remove('nav-active');
-            hamburger.classList.remove('toggle');
-        });
-    });
-
-    // Hamburger Menu Logic
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
-
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('nav-active');
-        hamburger.classList.toggle('toggle');
-    });
-</script>
+<script src="script.js"></script>
 </body>
 </html>
