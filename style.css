@@ -145,7 +145,7 @@ h2 { color: var(--brand-blue); font-size: 2.2rem; border-left: 5px solid var(--b
 
 /* Space between experience cards */
 #experience .project-card {
-    margin-bottom: 30px; 
+    margin-bottom: 15px; 
 }
 
 /* Remove margin from the very last card so it doesn't add extra space at the bottom of the section */
@@ -153,13 +153,35 @@ h2 { color: var(--brand-blue); font-size: 2.2rem; border-left: 5px solid var(--b
     margin-bottom: 0;
 }
 
-.skills-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+/* 1. Center the entire section content */
+#skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the H2 and the container */
+    text-align: center;
+}
+
+/* 2. Fix the grid to center the cards */
+.skills-container {
+    display: grid;
+    /* This creates a responsive grid that stays centered */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 400px)); 
+    justify-content: center; /* Key: Centers the grid tracks */
+    gap: 25px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* 3. Align text inside the cards */
 .skill-item {
-    background: rgba(30, 41, 59, 0.7);
-    padding: 25px;
-    border-radius: 18px;
-    flex: 1 1 calc(33% - 30px);
-    min-width: 280px;
+    background: rgba(30, 41, 59, 0.5);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(56, 189, 248, 0.1);
+    text-align: left; /* Keep text left-aligned inside for readability */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .hero-btns { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
@@ -202,6 +224,7 @@ footer { text-align: center; padding: 60px 20px; color: #64748b; font-size: 0.9r
     .toggle .line:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
     h1 { font-size: 2.5rem; }
 }
+
 
 
 
