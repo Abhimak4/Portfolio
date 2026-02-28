@@ -67,14 +67,34 @@ nav {
 
 .logo-link {
     display: flex;
-    align-items: center;
+    align-items: center; /* Vertically centers the logo image with the text block */
     text-decoration: none;
-    gap: 15px;
+    gap: 12px;
 }
 
-.nav-logo-img { height: 45px; width: auto; }
-.main-logo { font-size: 1.7rem; font-weight: 800; color: var(--brand-blue); letter-spacing: -0.5px; }
-.sub-logo { font-size: 0.75rem; color: #94a3b8; font-weight: 400; text-transform: uppercase; letter-spacing: 1px; }
+.logo-text-wrapper {
+    display: flex;
+    flex-direction: column; /* This forces the stack */
+    justify-content: center;
+    line-height: 1.2; /* Tightens the gap between the two lines */
+}
+
+.main-logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--brand-blue);
+    letter-spacing: -0.5px;
+}
+
+.sub-logo {
+    font-size: 0.7rem; /* Smaller font for the subtitle */
+    color: #94a3b8;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
 
 .nav-links { list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; }
 .nav-links a {
@@ -170,3 +190,4 @@ footer { text-align: center; padding: 60px 20px; color: #64748b; font-size: 0.9r
     .toggle .line:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
     h1 { font-size: 2.5rem; }
 }
+
