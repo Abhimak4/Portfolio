@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // 1. MOBILE MENU LOGIC
     const hamburger = document.getElementById('hamburger');
     const navLinksContainer = document.getElementById('nav-links');
+    const nav = document.querySelector('nav');
 
+    // 1. MOBILE MENU LOGIC
     if (hamburger && navLinksContainer) {
         hamburger.addEventListener('click', () => {
             navLinksContainer.classList.toggle('nav-active');
@@ -14,24 +14,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. SMOOTH SCROLL & URL HASH FIX
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault(); // Stop the "snap" jump
+            e.preventDefault(); 
             
             const targetId = this.getAttribute('href');
             
-            // Handle "Home" link specifically to scroll to top
-            if (targetId === '#hero' || targetId === '#') {
+            if (targetId === '#hero') {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
-                history.pushState(null, null, ' '); // Clears hash for Home
+                // Update URL to root
+                history.pushState(null, null, window.location.pathname);
             } else {
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    // Scroll to the element
+                    const navHeight = nav.offsetHeight;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+
                     window.scrollTo({
-                        top: targetElement.offsetTop - 80,
+                        top: offsetPosition,
                         behavior: 'smooth'
                     });
                     
-                    // FORCE the URL update
+                    // Force the address bar to update with the hash
                     history.pushState(null, null, targetId);
                 }
             }
