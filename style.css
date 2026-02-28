@@ -157,7 +157,6 @@ h2 { color: var(--brand-blue); font-size: 2.2rem; border-left: 5px solid var(--b
 #skills {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers the H2 and the container */
     text-align: center;
 }
 
@@ -224,6 +223,7 @@ footer { text-align: center; padding: 60px 20px; color: #64748b; font-size: 0.9r
     .toggle .line:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
     h1 { font-size: 2.5rem; }
 }
+
 
 
 
