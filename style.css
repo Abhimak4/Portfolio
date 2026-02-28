@@ -153,35 +153,21 @@ h2 { color: var(--brand-blue); font-size: 2.2rem; border-left: 5px solid var(--b
     margin-bottom: 0;
 }
 
-/* 1. Center the entire section content */
-#skills {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-/* 2. Fix the grid to center the cards */
-.skills-container {
-    display: grid;
-    /* This creates a responsive grid that stays centered */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 400px)); 
-    justify-content: center; /* Key: Centers the grid tracks */
-    gap: 25px;
-    width: 100%;
-    margin-top: 40px;
-}
-
-/* 3. Align text inside the cards */
+#skills { text-align: left; }
+.skills-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 35px; }
 .skill-item {
-    background: rgba(30, 41, 59, 0.5);
-    padding: 30px;
-    border-radius: 20px;
-    border: 1px solid rgba(56, 189, 248, 0.1);
-    text-align: left; /* Keep text left-aligned inside for readability */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    background: rgba(30, 41, 59, 0.7);
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    text-align: left;
+    flex: 1 1 calc(33.333% - 30px);
+    max-width: 340px;
+    min-width: 280px;
+    transition: 0.3s;
 }
+.skill-item:hover { border-color: var(--brand-blue); transform: scale(1.02); }
+.skill-item strong { color: var(--brand-blue); display: block; margin-bottom: 12px; font-size: 1.15rem; }
 
 .hero-btns { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
 .btn {
@@ -223,6 +209,7 @@ footer { text-align: center; padding: 60px 20px; color: #64748b; font-size: 0.9r
     .toggle .line:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
     h1 { font-size: 2.5rem; }
 }
+
 
 
 
